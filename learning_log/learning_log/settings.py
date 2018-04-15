@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 第三方应用
+    'bootstrap3',
+    # https://pypi.python.org/pypi/django-bootstrap3/9.1.0
+    # 自己的应用
     'learning_logs.apps.LearningLogsConfig',
     'users.apps.UsersConfig',
 ]
@@ -124,3 +129,8 @@ STATIC_URL = '/static/'
 
 # 我自己设置
 LOGIN_URL = '/users/login'
+
+# django-bootstrap3的设置
+BOOTSTRAP3 = {
+    'include_jquery': True,
+}
